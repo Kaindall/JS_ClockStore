@@ -1,6 +1,6 @@
 # trabalho2
 
-Atalho para a página da aplicação hospedada no Github.io: https:Kaindall.github.io/trabalho2
+Atalho para a página da aplicação hospedada no Github.io: [https:Kaindall.github.io/trabalho2](https://kaindall.github.io/trabalho2/)
 
 Desenvolvimento de uma loja virtual com conteúdo dinâmicamente apresentado. 
 Menu, footer, página de login/cadastro, carrinho de compras, uma página de inicial com anúncios, 
