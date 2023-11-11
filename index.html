@@ -6,76 +6,120 @@
     <link rel="stylesheet" href="/view/templates/index/principalStyle.css">
     <link rel="stylesheet" href="/view/templates/index/slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/view/templates/home/homeStyle.css">
     <title>M & Z Store</title>
     <link rel="icon" type="image/x-icon" href="/view/templates/index/images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script src="view/templates/index/slide.js" defer></script>
-    <script src="view/templates/index/menu.js" defer></script>
-    <script type="module" src="model/test/test.js" defer></script>"
+    <script src="/view/templates/index/slide.js" defer></script>
+    <script src="/view/templates/index/menu.js" defer></script>
+    <script src="/view/templates/home/home.js" defer></script>
+    
 </head>
   
 <body>
-  
-  <header class="header-content">
+
+  <div class="header-content">
+    <!-- Conteúdo do seu cabeçalho -->
+  </div>
+
+  <main>
+    <!--Slider carrossel-->
     
-    <div class="header">
+    <section class="slider">
+      <div class="slider-content">
 
-      <img class="logo" src="/view/templates/index/images/headerLogo.png" alt="logotipo" height="100px" width="150px">
+          <input type="radio" name="btn-radio" id="radio1">
+          <input type="radio" name="btn-radio" id="radio2">
+          <input type="radio" name="btn-radio" id="radio3">
 
-      <ul class="navbar">
+          <div class="slide-box primeiro">
+            <img class="img-desktop" src="/view/templates/index/images/Banner1.png" alt="slide 1">
+            <img class="img-mobile" src="/view/templates/index/images/Banner1mobile.png" alt="slide 1">
+          </div>
 
-        <li><a href="/view/templates/home/homeContent.html">Página Inicial</a></li>
-        <li><a href="/view/templates/productList/productListContent.html">Catalogo</a></li>
-        <li><a href="#">Sobre</a></li>
+          <div class="slide-box">
+            <img class="img-desktop" src="/view/templates/index/images/Banner2.png" alt="slide 2">
+            <img class="img-mobile" src="/view/templates/index/images/banner2mobile.png" alt="slide 2">
+          </div>
 
-      </ul>
+          <div class="slide-box">
+            <img class="img-desktop" src="/view/templates/index/images/Banner3.jpg" alt="slide 3">
+            <img class="img-mobile" src="/view/templates/index/images/banner3mobile.jpg" alt="slide 3">
+          </div>
 
-      <div class="header-icons">
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <i class='bx bx-search' id="search-icon"></i>
-        <i class='bx bx-user' id="user-icon"></i>
-        <i class='bx bx-cart-alt' id="cart-icon"></i>
+          <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+
+          <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+
       </div>
 
-      <!--Search -->
-      <div class="search-box">
-        <input type="search" name="" id="" placeholder="Procurar">
+    </section>
+
+    <section class="marcas">
+      <h2>Nossa Marcas</h2>
+      <div class="masrcas-content">
+        <a href="#"><img src="/view/templates/index/images/Marcas/grahan.png" alt="Graham relogios Logo png"></a>
+        <a href="#"><img src="/view/templates/index/images/Marcas/longines.png" alt="Longline Logo"></a>
+        <a href="#"><img src="/view/templates/index/images/Marcas/luminox.png" alt="Lunminox logo"></a>
+        <a href="#"><img src="/view/templates/index/images/Marcas/maserati.png" alt="Maserati Logo"></a>
+        <a href="#"><img src="/view/templates/index/images/Marcas/omega.png" alt="Omega Logo"></a>
+        <a href="#"><img src="/view/templates/index/images/Marcas/oris.png" alt="Oris Logo"></a>
+        <a href="#"><img src="/view/templates/index/images/Marcas/seiko.png" alt="Seiko Logo"></a>
       </div>
-      
-    </div>
+    </section>
 
-    <nav id="menu-header">
-      <ul>
-        <li><a href="/view/templates/products/products.html">Produtos</a></li>
-        <li><div id="categories">Marcas
-          <ul>
-            <li><a href="#">Bovet</a></li>
-            <li><a href="#">Bvlgari</a></li>
-            <li><a href="#">Carl-F</a></li>
-            <li><a href="#">Graham</a></li>
-            <li><a href="#">Hublot</a></li>
-            <li><a href="#">JacobCo</a></li>
-            <li><a href="#">Longines</a></li>
-            <li><a href="#">Luminox</a></li>
-            <li><a href="#">Maserati</a></li>
-            <li><a href="#">Omega</a></li>
-            <li><a href="#">Oris</a></li>
-            <li><a href="#">Rado</a></li>
-            <li><a href="#">Raymond Weil</a></li>
-            <li><a href="#">Seiko</a></li>
-            <li><a href="#">Tissot</a></li>
-            <li><a href="#">Tom Ford</a></li>
-          </ul>
-        </div></li>
-        <li><a href="/view/templates/products/products.html">Masculino</a></li>
-        <li><a href="/view/templates/products/products.html">Feminino</a></li>
-        <li><a href="#">Relógios Inteligentes</a></li>
-        <li><a href="#">Promoções</a></li>
-        <li><a href="#">Novidades</a></li>
-      </ul>
-    </nav>
+    <section class="black-friday">
+      <h2>BLACK FRIDAY</h2>
 
-  </header>
+      <div class="category">
+        <div class="category-box">
+          <h3>Sport</h3>
+        </div>
+        <div class="category-box">
+          <h3>De Luxo</h3>
+        </div>
+        <div class="category-box">
+          <h3>Premium</h3>
+        </div>
+        <div class="category-box">
+          <h3>Casual</h3>
+        </div>
+        <div class="category-box">
+          <h3>Promocional</h3>
+        </div>
+      </div>
+    </section>
+    
 
+    <section class="email">
+      <div class="email-contant">
+        <h2>Receba nossas novidades por e-mail</h2>
+        <div class="email-text">
+          <input type="text" placeholder="Nome Completo">
+          <input type="email" placeholder="E-mail">
+          <button>OK</button>
+       </div>
+
+      </div>
+
+
+
+    </section>
+    <!--TODO: Itens dinamicamente adicionados pelo AJAX-->
+  </main>
+ 
+  <div class="footer">
+    <!-- Conteúdo do seu rodapé -->
+  </div>
+
+  </div>
 </body>
 </html>
