@@ -31,8 +31,8 @@
   transition: 0.5s ease;
   background-color: white;
   font-family: 'Poppins', sans-serif;
-  position: fixed;
-  z-index: 9999;
+  /* position: fixed; */
+  /* z-index: 9999; */
 }
 
 
@@ -112,13 +112,14 @@
     background-color: var(--terciary-color);
     list-style: none;
     padding: 0;
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     width: 100%;
-    position: fixed;
-    top: 100px;
-  z-index: 9999;
+    font-family: 'Poppins', sans-serif;
+    /* position: fixed; */
+    /* top: 100px; */
+  /* z-index: 9999; */
 }
 
 #menu-header ul {
@@ -187,7 +188,7 @@
 main {
   height: auto;
   position: relative;
-  top: 130px;
+  top: 20px;
 
 }
 
@@ -226,35 +227,16 @@ main {
   padding: 20px;
 }
 
-.banner-anuncio {
-  position: relative;
-  width: 600px;
-  height: 250px;
-  background-color: #ebeff2;
-  top: -130px;
-  left: 600px;
+.marcas {
+  background-color: #f0f0f0;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
-.banner-anuncio-fem {
-  position: relative;
-  top: -150px;
-  left: 150px;
-  width: 600px;
-  height: 250px;
-  background-color: #ebeff2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.banner-anuncio:hover,
-.banner-anuncio-fem:hover {
-  transform: scale(110%);
+.marcas h2 {
+  padding: 20px 0 0 0;
 }
 
 .masrcas-content {
@@ -273,6 +255,7 @@ main {
 }
 
 
+
 /* Estilização do rodapé */
 
 .footer {
@@ -285,6 +268,7 @@ main {
   position: relative;
   font-family: 'Poppins', sans-serif;
   padding-top: 20px;
+  margin-top: 20px;
 }
 
 .footer-box {

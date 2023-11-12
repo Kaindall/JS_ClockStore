@@ -1,16 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 main {
-    padding-bottom: 150px;
     font-family: 'Poppins', sans-serif;
+    background-color: #9b9b9b;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-.black-friday {
+.black-friday,
+.mais-vendidos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding: 30px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.mais-vendidos h2 {
+    padding-bottom: 20px;
+}
+
+#carregar {
+        height: 50px;
+        width: 250px;
+        background-color: black;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+}
+
+#carregar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#carregar:hover {
+    background-color: #4ba0ea;
+    color: black;
 }
 
 .category {
@@ -18,15 +47,26 @@ main {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    text-align: center;
 }
 
 .category-box {
     height: 60px;
-    width: 120px;
+    width: 150px;
     border: 1px solid black;
     text-align: center;
     display: flex;
     align-items: center;
+}
+
+.category-box h3 {
+    width: 100%;
+    text-align: center;
+} 
+
+.category-box:hover {
+    background-color: black;
+    color: #4ba0ea;
 }
 
 .email {
@@ -37,7 +77,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    background-color: gray;
+    background-color: white;
 }
 
 .email-contant {
@@ -69,4 +109,66 @@ main {
 .email-text button {
     height: 50px;
     width: 60px;
+    background-color: black;
+    color: white;
+    border: none;
 }
+
+.email-text button:hover {
+    background-color: #4ba0ea;
+    color: black;
+}
+
+.card-container,
+.card-container-mais {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .card {
+    width: 250px;
+    height: 450px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .card-container-mais .card:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  .card-container img,
+  .card-container-mais img {
+    width: 200px;
+    padding-top: 10px;
+  }
+
+  .card-container .card{
+    margin-bottom: 20px;
+  }
+
+  .product-name {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .buy-button {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif
+  }
+
+  .buy-button:hover {
+    background-color: #4ba0ea;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+  }
