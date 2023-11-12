@@ -39,6 +39,8 @@ function setupFilter() {
 
 //Fim do Filtro
 
+
+
 //Paginação
 
 let currentPage = 1;
@@ -65,19 +67,34 @@ function loadProducts(page) {
               const img = document.createElement('img');
               img.src = `/model/repositories/src/images/${product.watch_brand}/${product.image}`;
               img.alt = 'Imagem do Produto';
+              img.className = 'product-image';
 
               const name = document.createElement('div');
               name.textContent = product.watch_name;
+              name.className = 'product-name';
 
               const price = document.createElement('div');
               price.textContent = `R$ ${product.price.toFixed(2)}`;
+              price.className = 'product-price';
 
-              const descount = document.createElement('div');
-              price.textContent = `R$ ${product.price.toFixed(2)}`;
+              //const descount = document.createElement('div');
+              //price.textContent = `R$ ${product.price.toFixed(2)}`;
+
+              const buyButton = createButton('Compre Já', () => {
+                console.log(`Produto comprado: ${product.watch_name}`);
+              }, 'buy-button');
+            
+              const addToCartButton = createButton('', () => {
+               // console.log(`Produto adicionado ao carrinho: ${product.watch_name}`);
+              }, 'cart-button');
+              const cartIcon = createCartIcon();
+              addToCartButton.appendChild(cartIcon);
 
               card.appendChild(img);
               card.appendChild(name);
               card.appendChild(price);
+              card.appendChild(buyButton);
+              //card.appendChild(addToCartButton);
               cardContainer.appendChild(card);
           });
 

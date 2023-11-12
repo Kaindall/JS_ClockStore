@@ -4,7 +4,7 @@ let currentPage = 1;
 const pageSize = 20; // Limite o número de linhas a 20
 
 function loadProducts(page) {
-  fetch(`/model/repositories/ProductRepository.json?page=${page}&pageSize=${pageSize}`)
+  fetch(`/trabalho2/model/repositories/ProductRepository.json?page=${page}&pageSize=${pageSize}`)
     .then(response => response.json())
     .then(data => {
       const tableBody = document.getElementById('table-body');
@@ -15,7 +15,7 @@ function loadProducts(page) {
         // Adicionando classes aos elementos
         const imgCell = document.createElement('td');
         const img = document.createElement('img');
-        img.src = `/model/repositories/src/images/${product.watch_brand}/${product.image}`;
+        img.src = `/trabalho2/model/repositories/src/images/${product.watch_brand}/${product.image}`;
         img.alt = 'Imagem do Produto';
         img.classList.add('product-image'); // Adicionando a classe 'product-image' à imagem
         imgCell.appendChild(img);

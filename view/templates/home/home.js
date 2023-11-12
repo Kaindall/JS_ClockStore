@@ -32,7 +32,7 @@ function createProductCard(product) {
   card.className = 'card';
 
   const img = document.createElement('img');
-  img.src = `/model/repositories/src/images/${product.watch_brand}/${product.image}`;
+  img.src = `/trabalho2/model/repositories/src/images/${product.watch_brand}/${product.image}`;
   img.alt = 'Imagem do Produto';
   img.className = 'product-image';
 
@@ -78,7 +78,7 @@ function createCartIcon() {
 }
 
 function loadProductsInContainer(containerId, limit, productNames = []) {
-  fetch(`/model/repositories/ProductRepository.json`)
+  fetch(`/trabalho2/model/repositories/ProductRepository.json`)
     .then(response => response.json())
     .then(data => {
       const cardContainer = document.getElementById(containerId);
