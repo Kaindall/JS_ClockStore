@@ -114,6 +114,29 @@
   pointer-events: auto;
 }
 
+#profile-menu {
+  font-size: 0.8em;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  right: 25%;
+  background-color: lightgray;
+  box-shadow: 1px 0px 13px 1px rgba(0,0,0,0.58);
+  border-radius: 5px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+}
+
+#profile-menu #logout-button {
+  padding: 5px;
+}
+
 #login-form {
   opacity: 0;
   pointer-events: none;
