@@ -127,6 +127,7 @@
 #user-icon .view {
   opacity: 1;
   pointer-events: auto;
+  animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 #profile-menu {
