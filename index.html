@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="/trabalho2/view/templates/index/principalStyle.css">
     <link rel="stylesheet" href="/trabalho2/view/templates/index/slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="view/templates/home/homeStyle.css">
+    <link rel="stylesheet" href="/trabalho2/view/templates/home/homeStyle.css">
     <title>M & Z Store</title>
     <link rel="icon" type="image/x-icon" href="/trabalho2/view/templates/index/images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="/trabalho2/view/templates/index/login.js" defer></script>
     <script src="/trabalho2/view/templates/index/slide.js" defer></script>
-    <script src="/trabalho2/view/templates/index/menu.js" defer></script>
     <script src="/trabalho2/view/templates/home/home.js" defer></script>
     
 </head>
@@ -19,15 +19,12 @@
 <header class="header-content">
     
   <div class="header">
-
     <img class="logo" src="/trabalho2/view/templates/index/images/headerLogo.png" alt="logotipo" height="100px" width="150px">
 
     <ul class="navbar">
-
-      <li><a href="/trabalho2/index.html">Página Inicial</a></li>
+      <li><a href="/index.html">Página Inicial</a></li>
       <li><a href="/trabalho2/view/templates/productList/productListContent.html">Catalogo</a></li>
       <li><a href="#">Sobre</a></li>
-
     </ul>
 
     <div class="header-icons">
@@ -35,18 +32,56 @@
       <i class='bx bx-search' id="search-icon"></i>
       <a class='bx bx-user' id="user-icon" href="/trabalho2/view/templates/login/loginContent.html"></a>
       <a class='bx bx-cart-alt' id="cart-icon" href="/trabalho2/view/templates/Cart/cart.html"></a>
+      <i class='bx bx-user' id="user-icon">
+        <form id="login-form">
+          <label for="login-username">Usuário</label>
+          <input type="text" id="login-username" name="login-username" required>
+
+          <label for="login-password">Senha</label>
+          <input type="password" id="login-password" name="login-password" required>
+
+          <a id="signup-link">Cadastre-se</a>
+
+          <button id="login-submit" type="submit">Entrar</button>
+        </form>
+
+        <form id="register-form">
+          <label for="name-register">Nome Completo</label>
+          <input type="text" id="name-register" name="name-register" required>
+
+          <label for="register-username">Usuário</label>
+          <input type="text" id="register-username" name="register-username" required>
+
+          <label for="register-password">Senha</label>
+          <input type="password" id="register-password" name="register-password" required>
+
+          <label for="register-confirm-password">Confirme a senha</label>
+          <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+
+          <label for="register-email">Email</label>
+          <input type="email" id="register-email" name="register-email" required>
+
+          <label for="register-confirm-email">Confirme o email</label>
+          <input type="email" id="register-confirm-email" name="register-confirm-email" required>
+
+          <label for="register-contract-rules">Li e concordo com os <a>Termos de Uso</a></label>
+          <input type="checkbox" id="register-contract-rules" name="register-contract-rules" required>
+
+          <button id="register-submit" type="submit">Registrar</button>
+        </form>
+      </i>
+      <i class='bx bx-cart-alt' id="cart-icon"></i>
     </div>
 
     <!--Search -->
     <div class="search-box">
       <input type="search" name="" id="" placeholder="Procurar">
     </div>
-    
   </div>
 
   <nav id="menu-header">
     <ul>
-      <li><a href="/trabalho2//view/templates/products/products.html">Produtos</a></li>
+      <li><a href="/trabalho2/view/templates/products/products.html">Produtos</a></li>
       <li><div id="categories">Marcas
         <ul>
           <li><a href="#">Bovet</a></li>
@@ -67,14 +102,13 @@
           <li><a href="#">Tom Ford</a></li>
         </ul>
       </div></li>
-      <li><a href="/trabalho2//view/templates/products/products.html">Masculino</a></li>
-      <li><a href="/trabalho2//view/templates/products/products.html">Feminino</a></li>
+      <li><a href="/trabalho2/view/templates/products/products.html">Masculino</a></li>
+      <li><a href="/trabalho2/view/templates/products/products.html">Feminino</a></li>
       <li><a href="#">Relógios Inteligentes</a></li>
       <li><a href="#">Promoções</a></li>
       <li><a href="#">Novidades</a></li>
     </ul>
   </nav>
-
 </header>
 
 
@@ -217,10 +251,10 @@
       <div class="footer-box">
         <h3>Metodos de Pagamento</h3>
         <div class="payment">
-          <img src="/trabalho2//view/templates/index/images/VisaIncLogoPNGimage.png" alt="">
-          <img src="/trabalho2//view/templates/index/images/MastercardLogoPNGimage.png" alt="">
-          <img src="/trabalho2//view/templates/index/images/PayPalLogoPNGimage.png" alt="">
-          <img src="/trabalho2//view/templates/index/images/PixLogoPNGimage.png" alt="">
+          <img src="/trabalho2/view/templates/index/images/VisaIncLogoPNGimage.png" alt="">
+          <img src="/trabalho2/view/templates/index/images/MastercardLogoPNGimage.png" alt="">
+          <img src="/trabalho2/view/templates/index/images/PayPalLogoPNGimage.png" alt="">
+          <img src="/trabalho2/view/templates/index/images/PixLogoPNGimage.png" alt="">
         </div>
       </div>
     </section>

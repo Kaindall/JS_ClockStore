@@ -17,6 +17,20 @@
 
 /* Estilização do menu de categorias */
 
+/*Dropdown menus ocultos*/
+
+#register-form,
+#profile-menu,
+#login-form {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  right: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
  .header-content{
   position: relative;
 }
@@ -106,6 +120,76 @@
   pointer-events: auto;
 }
 
+#user-icon {
+  position: relative;
+}
+
+#user-icon .view {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#profile-menu {
+  font-size: 0.8em;
+  background-color: lightgray;
+  box-shadow: 1px 0px 13px 1px rgba(0,0,0,0.58);
+  border-radius: 5px;
+  padding: 7px;
+  gap: 8px;
+  align-items: center;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+}
+
+#profile-menu #logout-button {
+  padding: 5px;
+}
+
+#login-form {
+  background-color: var(--primary-color);
+  box-shadow: 1px 0px 13px 1px rgba(0,0,0,0.58);
+  border-radius: 5px;
+  padding: 9px;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+}
+
+#user-icon #login-form input {
+  border: 0.5px;
+  border-radius: 5px;
+  padding-left: 3px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  width: 150px;
+}
+
+#user-icon #login-form label {
+  font-size: 0.8em;
+}
+
+#user-icon #login-form a {
+  font-size: 0.7em;
+  width: fit-content;
+  cursor: pointer;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+#user-icon #login-form button {
+  background-color: var(--terciary-color);
+  color: white;
+  align-self: center;
+  border: 0.5px;
+  border-radius: 7px;
+  padding: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+#user-icon #login-form button:hover {
+  transform: scale(1.1);
+}
 
 /* Estilização do Menu */
 
