@@ -1,50 +1,52 @@
 const userElement = document.querySelector("#user-icon");
 const loginElement = document.querySelector("#login-form");
-//localStorage.removeItem("user");
+const signupButton = document.querySelector("#signup-link");
+localStorage.removeItem("user");
 let localUser = JSON.parse(localStorage.getItem("user"));
-var isOpen;
 
+//escolher a tela que abrirá
 userElement.addEventListener("click", event => {
     if (event.target == userElement) {
         userElement.childNodes.forEach (child => {
             try {
-                if (isOpen) {
-                    child.classList.remove("view");
-                    isOpen = false;
-                    console.log("aqui");
-                } else if (!isOpen && localUser === null) {
-                    isOpen = true;
-                    let loginElement = document.querySelector("#login-form");
-                    loginElement.classList.toggle("view");
-                    console.log("Nada logado")
-                    return
-                } else if (!isOpen) {
-                    if (userElement.querySelector("#profile-menu") === null) {
-                        let profileElement = document.createElement("div");
-                        profileElement.setAttribute("id", "profile-menu");
-                        profileElement.innerHTML = 
-                            `<p>${localUser["name"]}</p>
-                            <p>${localUser["email"]}</p>
-                            <a>Meu Perfil</a>
-                            <a>Carrinho</a>
-                            <a>Configurações</a>
-                            <a id="logout-button">Sair</a>
-                            `
-                        userElement.appendChild(profileElement);
-                        console.log("aqui3")
+                if (child.nodeType !== Node.TEXT_NODE) {
+                    if (child.classList.contains("view")) {
+                        child.classList.remove("view");
+                        console.log("Removendo: ")
+                        console.log(child)
+                    } else if (!child.classList.contains("view") && localUser === null) {
+                        let loginElement = document.querySelector("#login-form");
+                        loginElement.classList.toggle("view");
+                        console.log("Nenhuma sessão de usuário encontrada!")
+                    } else {
+                        var profileElement = document.querySelector("#profile-menu")
+                        if (profileElement === null) {
+                            profileElement = document.createElement("div");
+                            profileElement.setAttribute("id", "profile-menu");
+                            profileElement.innerHTML = 
+                                `<p>${localUser["name"]}</p>
+                                <p>${localUser["email"]}</p>
+                                <a>Meu Perfil</a>
+                                <a>Carrinho</a>
+                                <a>Configurações</a>
+                                <button id="logout-button">Sair</button>
+                                `
+                            userElement.appendChild(profileElement);
+                            
+                            console.log("Sessão encontrada, criando elemento");
+
+                            profileElement.classList.add("view");
+                        } else if (child === profileElement) {
+                            profileElement.classList.add("view");
+                        }
                     }
-                    isOpen = true;
-                    let profileElement = document.querySelector("#profile-menu")
-                    profileElement.classList.toggle("view");
-                    console.log("aqui2")
-                    return
                 }
-            } catch (e) {}
+            } catch (e) {console.log("erro: " + child)}
         })
     }
 })
 
-
+//formulário de login
 loginElement.addEventListener("submit", event => {
     event.preventDefault();
     let usernameLogin = document.querySelector("#login-username");
@@ -59,9 +61,7 @@ loginElement.addEventListener("submit", event => {
             .then(response => response.json())
             .then(data => {
                 let exists = false;
-                let isAuthenticated = false;
 
-                //login
                 for (let i = 0; i < data.length; i++)
                 {
                     if (data[i]["username"] === usernameLogin.value) {
@@ -92,4 +92,8 @@ loginElement.addEventListener("submit", event => {
     if (passwordLogin.value == "") {
         passwordLogin.setAttribute("placeholder", "Campo vazio!")    
     }
+})
+
+signupButton.addEventListener("click", event => {
+    if (event.target == signupButton)
 })

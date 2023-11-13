@@ -146,7 +146,7 @@
   background-color: var(--primary-color);
   box-shadow: 1px 0px 13px 1px rgba(0,0,0,0.58);
   border-radius: 5px;
-  padding: 7px;
+  padding: 9px;
   display: flex;
   flex-direction: column;
   cursor: default;
@@ -164,6 +164,14 @@
 
 #user-icon #login-form label {
   font-size: 0.8em;
+}
+
+#user-icon #login-form a {
+  font-size: 0.7em;
+  width: fit-content;
+  cursor: pointer;
+  margin-bottom: 5px;
+  text-decoration: underline;
 }
 
 #user-icon #login-form button {
