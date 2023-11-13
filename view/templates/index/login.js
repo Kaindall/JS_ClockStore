@@ -80,7 +80,7 @@ loginElement.addEventListener("submit", event => {
                             isAuthenticated = true;
                             localStorage.setItem("user", JSON.stringify(data[i]));
                             localUser = data[i];
-                            console.log("Logado")
+                            console.log("Login bem-sucedido")
                             break;
                         }
                         passwordLogin.value = "";
@@ -99,7 +99,7 @@ loginElement.addEventListener("submit", event => {
                     isAuthenticated = true;
                     localStorage.setItem("user", JSON.stringify(userDatabase[i]));
                     localUser = userDatabase[i];
-                    console.log("Logado");
+                    console.log("Login bem-sucedido");
                     break;
                 }
                 passwordLogin.value = "";
@@ -114,9 +114,13 @@ loginElement.addEventListener("submit", event => {
         usernameLogin.value = "";
         usernameLogin.setAttribute("placeholder", "Usuário inexistente")
         passwordLogin.value = "";
+        return
     }
 
     //efeitos visuais ao logar
+    loginElement.classList.toggle("view");
+    
+
 
 })
 
@@ -205,3 +209,7 @@ registerForm.addEventListener("submit", event => {
 
 
 })
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
