@@ -165,7 +165,8 @@
   width: 150px;
 }
 
-#user-icon #login-form label {
+#user-icon #login-form label,
+#user-icon #register-form label {
   font-size: 0.8em;
 }
 
@@ -177,7 +178,8 @@
   text-decoration: underline;
 }
 
-#user-icon #login-form button {
+#user-icon #login-form button,
+#user-icon #register-form button {
   background-color: var(--terciary-color);
   color: white;
   align-self: center;
