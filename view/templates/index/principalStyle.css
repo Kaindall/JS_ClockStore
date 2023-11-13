@@ -17,6 +17,20 @@
 
 /* Estilização do menu de categorias */
 
+/*Dropdown menus ocultos*/
+
+#register-form,
+#profile-menu,
+#login-form {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  right: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
  .header-content{
   position: relative;
 }
@@ -116,17 +130,10 @@
 
 #profile-menu {
   font-size: 0.8em;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-  position: absolute;
-  right: 25%;
   background-color: lightgray;
   box-shadow: 1px 0px 13px 1px rgba(0,0,0,0.58);
   border-radius: 5px;
   padding: 7px;
-  display: flex;
-  flex-direction: column;
   gap: 8px;
   align-items: center;
   cursor: default;
@@ -138,17 +145,10 @@
 }
 
 #login-form {
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-  position: absolute;
-  right: 25%;
   background-color: var(--primary-color);
   box-shadow: 1px 0px 13px 1px rgba(0,0,0,0.58);
   border-radius: 5px;
   padding: 9px;
-  display: flex;
-  flex-direction: column;
   cursor: default;
   transition: all 0.3s ease-in-out;
 }
