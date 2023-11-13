@@ -3,38 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/view/templates/index/principalStyle.css">
-    <link rel="stylesheet" href="/view/templates/index/slider.css">
+    <link rel="stylesheet" href="/trabalho2/view/templates/index/principalStyle.css">
+    <link rel="stylesheet" href="/trabalho2/view/templates/productList/productListStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>M & Z Store</title>
-    <link rel="icon" type="image/x-icon" href="/view/templates/index/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/trabalho2/view/templates/index/images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script src="/view/templates/index/slide.js" defer></script>
-    <script src="/view/templates/index/menu.js" defer></script>
-    <script src="cart.js" defer></script>
-    <link rel="stylesheet" href="https://unkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script src="/trabalho2/view/templates/index/slide.js" defer></script>
+    <script src="/trabalho2/view/templates/index/menu.js" defer></script>
+    <script src="productlist.js" defer></script>
+    <script src="/trabalho2/view/templates/home/home.js" defer></script>
 </head>
   
+<header class="header-content">
+    
+  <div class="header">
+
+    <img class="logo" src="/trabalho2/view/templates/index/images/headerLogo.png" alt="logotipo" height="100px" width="150px">
+
+    <ul class="navbar">
+
+      <li><a href="/trabalho2/index.html">Página Inicial</a></li>
+      <li><a href="/trabalho2/view/templates/productList/productListContent.html">Catalogo</a></li>
+      <li><a href="#">Sobre</a></li>
+
+    </ul>
+
+    <div class="header-icons">
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-search' id="search-icon"></i>
+      <i class='bx bx-user' id="user-icon"></i>
+      <a class='bx bx-cart-alt' id="cart-icon" href="/trabalho2/view/templates/Cart/cart.html"></a>
+    </div>
+
+    <!--Search -->
+    <div class="search-box">
+      <input type="search" name="" id="" placeholder="Procurar">
+    </div>
+    
+  </div>
+
+  <nav id="menu-header">
+    <ul>
+      <li><a href="/trabalho2/view/templates/products/products.html">Produtos</a></li>
+      <li><div id="categories">Marcas
+        <ul>
+          <li><a href="#">Bovet</a></li>
+          <li><a href="#">Bvlgari</a></li>
+          <li><a href="#">Carl-F</a></li>
+          <li><a href="#">Graham</a></li>
+          <li><a href="#">Hublot</a></li>
+          <li><a href="#">JacobCo</a></li>
+          <li><a href="#">Longines</a></li>
+          <li><a href="#">Luminox</a></li>
+          <li><a href="#">Maserati</a></li>
+          <li><a href="#">Omega</a></li>
+          <li><a href="#">Oris</a></li>
+          <li><a href="#">Rado</a></li>
+          <li><a href="#">Raymond Weil</a></li>
+          <li><a href="#">Seiko</a></li>
+          <li><a href="#">Tissot</a></li>
+          <li><a href="#">Tom Ford</a></li>
+        </ul>
+      </div></li>
+      <li><a href="/trabalho2/view/templates/products/products.html">Masculino</a></li>
+      <li><a href="/trabalho2/view/templates/products/products.html">Feminino</a></li>
+      <li><a href="#">Relógios Inteligentes</a></li>
+      <li><a href="#">Promoções</a></li>
+      <li><a href="#">Novidades</a></li>
+    </ul>
+  </nav>
+
+</header>
+
 <body>
 
-  <div class="header-content">
-    <!-- Conteúdo do seu cabeçalho -->
-  </div>
-
   <main>
-    <div class="carrinho">
-        div.cabeç<alho-carrinho>
-            <button>
-                <i class="bx bx-chevron" id="cart-icon"></i>
-            </button>
-        </alho-carrinho>
-    </div>
+    <h2>Nosso Catálogo</h2>
+    <table id="product-table">
+      <thead>
+        <tr>
+          <th>Imagem</th>
+          <th>Nome do Relógio</th>
+          <th>Marca</th>
+          <th>Categoria</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    
+    <button id="load-more">Finalizar a Compra</button>
+    
+    <script src="productlist.js" defer></script>
+    
+
   </main>
  
-  <div class="footer">
-    <!-- Conteúdo do seu rodapé -->
-  </div>
+  <section class="footer-content">
+    
+    <section class="footer">
+      <div class="footer-box">
+        <h3>M & Z Store</h3>
+        <p>Lorem Ipson dolor sit amet consectetur.</p>
+        <div class="social">
+          <a href="#"><i class='bx bxl-facebook' ></i></a>
+          <a href="#"><i class='bx bxl-twitter' ></i></a>
+          <a href="#"><i class='bx bxl-instagram' ></i></a>
+          <a href="#"><i class='bx bxl-tiktok' ></i></a>
+        </div>
+      </div>
+  
+      <div class="footer-box">
+        <h3>Suporte</h3>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Ajuda & Suporte</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+      </div>
+  
+      <div class="footer-box">
+        <h3>Nossas Lojas</h3>
+        <li><a href="#">Japão</a></li>
+        <li><a href="#">Brasil</a></li>
+        <li><a href="#">Estados Unidos da America</a></li>
+        <li><a href="#">Canada</a></li>
+      </div>
+  
+      <div class="footer-box">
+        <h3>Metodos de Pagamento</h3>
+        <div class="payment">
+          <img src="/trabalho2/view/templates/index/images/VisaIncLogoPNGimage.png" alt="">
+          <img src="/trabalho2/view/templates/index/images/MastercardLogoPNGimage.png" alt="">
+          <img src="/trabalho2/view/templates/index/images/PayPalLogoPNGimage.png" alt="">
+          <img src="/trabalho2/view/templates/index/images/PixLogoPNGimage.png" alt="">
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <section class="copyright">
+      <p>Copyright © 2023 - M&Z Store</p>
+      <p>Michael & Zanetti</p>
+    </section>
+
+  </section>
+
 </body>
+
 </html>
