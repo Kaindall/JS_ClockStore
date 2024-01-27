@@ -1,4 +1,4 @@
-# trabalho2
+# Loja Virtual de Relógios
 
 Atalho para a página da aplicação hospedada no Github.io: [https:Kaindall.github.io/JS_ClockStore](https://kaindall.github.io/JS_ClockStore/)
 
